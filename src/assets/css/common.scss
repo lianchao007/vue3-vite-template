@@ -1,0 +1,509 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.woff2?t=1644979203575') format('woff2'),
+    url('../font/iconfont.woff?t=1644979203575') format('woff'),
+    url('../font/iconfont.ttf?t=1644979203575') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// 滚动条样式
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 10px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #afafaf;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ededed;
+}
+
+.page_dialog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  .page_dialog_header {
+    height: 50px;
+    border-bottom: 2px solid #F0F0F0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .table_template {
+    flex: 1;
+  }
+}
+.mystyle_dialog {
+  .el-dialog {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .el-dialog__header {
+    background: linear-gradient(90deg, #07439D, #3272C7);
+    text-align: center;
+
+    .el-dialog__title {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  .el-dialog__headerbtn .el-dialog__close {
+    background: #fff;
+    color: #3272C7;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 3px;
+  }
+}
+
+.table_template {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 5px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  header {
+    .el-form-item {
+      margin-bottom: 5px;
+      margin-right: 10px;
+    }
+  }
+
+  main {
+    overflow: hidden;
+
+    .el-table {
+      width: 100%;
+      height: 100%;
+
+      th.el-table__cell {
+        background: #EFF2F8;
+      }
+
+      thead {
+        color: #333;
+      }
+    }
+
+    .el-table__inner-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .el-table__body-wrapper {
+      flex: 1;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.w70 {
+  width: 70px;
+
+  &.el-input {
+    width: 70px;
+  }
+}
+.w120 {
+  width: 120px;
+
+  &.el-input {
+    width: 120px;
+  }
+}
+
+.w150 {
+  width: 150px;
+
+  &.el-input {
+    width: 150px;
+  }
+}
+
+.w250 {
+  width: 250px;
+
+  &.el-input {
+    width: 250px;
+  }
+}
+
+body .el-pagination.is-background .btn-next,
+body .el-pagination.is-background .btn-prev,
+body .el-pagination.is-background .el-pager li {
+  border-radius: 50%;
+}
+
+body {
+  .el-dialog__header {
+    margin: 0;
+  }
+  // 菜单
+  .el-menu--popup {
+    background: #212a3d;
+  }
+
+  // 分页器
+  .el-pagination.is-background .el-pager li:not(.disabled).active {
+    background: linear-gradient(90deg, #377CFF, #5EAAFF);
+  }
+
+  .el-pagination__jump .el-input__inner {
+    border-color: #4AA8FF;
+  }
+
+  // 多选框
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background: linear-gradient(90deg, #377CFF, #5EAAFF);
+  }
+
+  // 时间选择器
+  .el-date-editor .el-range-input {
+    width: 43%;
+  }
+  // 按钮
+  .default_btn,
+  .default_btn.is-disabled,
+  .default_btn:hover,
+  .default_btn:focus,
+  .default_btn.is-disabled:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 8px 9px 0px rgba(220, 220, 220, 0.7000);
+    border: 1px solid #377CFF;
+    color: #377CFF;
+  }
+
+  .primary_btn,
+  .primary_btn.is-disabled,
+  .primary_btn:hover,
+  .primary_btn:focus,
+  .primary_btn.is-disabled:hover {
+    background: linear-gradient(90deg, #377CFF, #5EAAFF);
+    color: #fff;
+    border: none;
+  }
+
+  .light_primary_btn,
+  .light_primary_btn.is-disabled,
+  .light_primary_btn:hover,
+  .light_primary_btn:focus,
+  .light_primary_btn.is-disabled:hover {
+    background: linear-gradient(90deg, #37A3FF, #5EC4FF);
+    color: #fff;
+    border: none;
+  }
+
+  .success_btn,
+  .success_btn.is-disabled,
+  .success_btn:hover,
+  .success_btn:focus,
+  .success_btn.is-disabled:hover {
+    background: linear-gradient(90deg, #3AC27D, #64D29A);
+    color: #fff;
+    border: none;
+  }
+
+  .error_btn,
+  .error_btn.is-disabled,
+  .error_btn:hover,
+  .error_btn:focus,
+  .error_btn.is-disabled:hover {
+    background: linear-gradient(90deg, #FF6C6C, #FF9595);
+    color: #fff;
+    border: none;
+  }
+
+  .info_btn,
+  .info_btn.is-disabled,
+  .info_btn:hover,
+  .info_btn:focus,
+  .info_btn.is-disabled:hover {
+    background: linear-gradient(90deg, #CFCFCF, #E3E3E3);
+    color: #fff;
+    border: none;
+  }
+
+  .el-button.is-disabled,
+  .el-button.is-disabled:hover {
+    background: linear-gradient(90deg, #CFCFCF, #E3E3E3);
+    color: #fff;
+    border: none;
+  }
+
+  .is-plain {
+    &.blue_btn {
+      background: #F1FBFF;
+      border: 1px solid #BAEAFF;
+      color: #46C7FF;
+    }
+
+    &.green_btn {
+      background: #E8F9F1;
+      border: 1px solid #A5EDC9;
+      color: #3AC27D;
+    }
+
+    &.deepblue_btn {
+      background: #EFF7FF;
+      border: 1px solid #B7DCFF;
+      color: #4AA8FF;
+    }
+
+    &.orange_btn {
+      background: #FCECD8;
+      border: 1px solid #FFDFB7;
+      color: #FF9C19;
+    }
+  }
+  .el-button {
+    &.default_text_btn {
+      border: none;
+      background: transparent;
+    }
+  }
+}
+
+.btn_icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.btn_icon_large {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.form_section_header {
+  line-height: 42px;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #377CFF;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 4px;
+    height: 0;
+    border-top: 8px solid #07439D;
+    border-bottom: 8px solid #377CFF;
+    border-radius: 2px;
+  }
+}
+.chart_box {
+  width: 100%;
+  height: 100%;
+}
+.c377CFF {
+  color: #377cff;
+}
+.cFF6047 {
+  color: #ff6047;
+}
+.cFF9C19 {
+  color: #ff9c19;
+}
+.cAE78FF {
+  color: #ae78ff;
+}
+.c3AC27D {
+  color: #3AC27D;
+}
+.btn_tips {
+  width: 51px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 5px;
+}
+.bEBF0FE {
+  background: #ebf0fe;
+  color: #377cff;
+}
+.bFFEDEA {
+  background: #ffedea;
+  color: #ff6047;
+}
+.bFCECD8 {
+  background: #fcecd8;
+  color: #ff9c19;
+}
+.bF1EDF9 {
+  background: #f1edf9;
+  color: #ae78ff;
+}
+html {
+  font-size: 16px;
+}
+@media screen and (max-width: 1159px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+}
